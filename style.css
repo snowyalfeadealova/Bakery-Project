@@ -1,0 +1,706 @@
+:root{
+  --caramel:#785e4a;
+}
+
+*{
+  margin:0; padding:0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+body{
+  background-color:#f7dcbd;
+}
+
+section{
+  padding:2rem 9%;
+}
+
+.btn:hover{
+  background:#785e4a;
+}
+
+.heading{
+  text-align:center;
+  font-size: 4rem;
+  color:#785e4a;
+  padding:5rem;
+  margin: 2rem 0;
+  background: #3b2a20;
+}
+
+.heading span{
+  color:#d1b89a;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background:#785e4a;
+  color:#faf7f0;
+  padding:.9rem 3.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #d1b89a;
+}
+
+header{
+  position: fixed;
+  top:0; left:0; right:0;
+  background: #faf7f0;
+  padding:20px 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+header .logo{
+  font-size: 3rem;
+  color: #3b2a20;
+  font-weight: bolder;
+}
+
+header .logo span{
+  color:#785e4a;
+}
+
+header .navbar a{
+  font-size: 2rem;
+  padding:0 1.5rem;
+  color: #3b2a20;
+}
+
+header .navbar a:hover{
+  color:#d1b89a;
+}
+
+header .icons a{
+  font-size: 2.5rem;
+  color:#3b2a20;
+  margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+  color:#d1b89a;
+}
+
+header #toogler{
+  display: none;
+}
+
+header .fa-bars{
+  font-size: 3rem;
+  color:#3b2a20;
+  border-radius: .5rem;
+  padding:.5rem 1.5rem;
+  cursor: pointer;
+  border:.1rem solid #3b2a20;
+  display: none;
+}
+
+/*home style*/
+
+.home{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background:url(../images/Background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content{
+  max-width: 50rem;
+}
+
+.home .content h3{
+  font-size: 6rem;
+  color:#785e4a;
+}
+
+.home .content span{
+  font-size: 3.5rem;
+  color:#785e4a;
+  padding:1rem 0;
+  line-height: 1.5;
+}
+
+.home .content p{
+  font-size: 1.5rem;
+  color:#785e4a;
+  padding:1rem 0;
+  line-height: 1.5;
+}
+
+/*About style*/
+.about{
+  padding-top: 10rem;
+  background: url(../images/Background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.about .row{
+  display:flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap:wrap;
+  padding:2rem 0;
+  padding-bottom: 3rem;
+}
+
+.about .row .video-container{
+  flex:1 1 40rem;
+  position: relative;
+}
+
+
+.about .row .video-container video{
+  width:100%;
+  border:1.5rem solid #faf7f0;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem #3b2a20;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.about .row .video-container h3{
+  position:absolute;
+  top:50%; transform: translateY(-50%);
+  font-size: 3rem;
+  color:#785e4a;
+  background: #faf7f0;
+  width:100%;
+  padding:1rem 2rem;
+  text-align: center;
+  mix-blend-mode: screen;
+}
+.about .row .content{
+  flex:1 1 40rem;
+}
+
+.about .row .content{
+  flex:1 1 40rem;
+}
+
+.about .row .content h3{
+  font-size: 3rem;
+  color:#785e4a;
+}
+
+.about .row .content p{
+  font-size: 1.5rem;
+  color:#785e4a;
+  padding: 5rem 0;
+  padding-top: 1rem;
+  line-height: 1.5;
+}
+
+/* Container pembungkus utama ikon */
+.icons-container {
+    background: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 3rem 9%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Setiap kotak ikon individual */
+.icons-container .icons {
+    background: #faf7f0;
+    border: .1rem solid #3b2a20;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1 1 23rem; /* Membantu susunan otomatis responsif */
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem #3b2a20;
+}
+
+/* Gambar ikon */
+.icons-container .icons img {
+    height: 5rem;
+    width: 5rem;
+    object-fit: contain;
+}
+
+/* Teks judul ikon */
+.icons-container .icons .info h3 {
+    color:rgba(242, 172, 183, 0.937);
+    font-size: 1.7rem;
+    padding-bottom: .4rem;
+    text-transform: capitalize;
+}
+
+/* Subteks deskripsi */
+.icons-container .icons .info span {
+    color:#785e4a;
+    font-size: 1.3rem;
+}
+
+/* Container Grid untuk Menu Dessert */
+
+  .product-banner {
+    background-color: #785e4a;
+    color: #ffffff;
+    text-align: center;
+    padding:18px 0;
+    margin-bottom: 30px;
+    margin-top: 110px;
+  }
+
+  .product-banner h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.05);
+}
+
+/* Kartu Produk Utama */
+.product-card {
+  position: relative;
+  background-color: #f7f3ec;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eae3d9;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Badge Diskon di Kiri Atas */
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #5c4033;
+  color: #ffffff;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  z-index: 3;
+}
+
+/* Kumpulan Ikon (Love & Share) di Kanan Atas */
+.product-icons {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 3;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #444;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: #ffffff;
+  color: #d9534f;
+  transform: scale(1.05);
+}
+
+/* Container Gambar Dessert */
+.product-image-container {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px 10px 20px;
+  box-sizing: border-box;
+}
+
+.product-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.03);
+}
+
+/* Bagian Informasi Produk */
+.product-info {
+  background-color: #faf7f0;
+  padding: 16px;
+  border-top: 1px solid #efeae2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 0;
+}
+
+/* Harga Produk */
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.current-price {
+  font-size: 15px;
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
+.old-price {
+  font-size: 13px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* Tombol Add To Cart yang Rapi di Dalam Card */
+.add-to-cart-btn {
+  background-color: #5c4033;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #432e24;
+}
+
+/* Section Review */
+
+/* Section Review */
+.review {
+  padding-top: 10rem;
+  padding-left: 9%;
+  padding-right: 9%;
+  padding-bottom: 2rem;
+}
+
+.review .heading {
+  text-align: center;
+  font-size: 3rem;
+  color: ivory;
+  background-color: #3b2a20;
+  margin-bottom: 3rem;
+  border-radius: .5rem;
+  padding: 1.5rem 0;
+}
+
+.review .heading span {
+  color: ivory;
+}
+
+/* Container Komentar (Flexbox / Grid Berjajar) */
+.review .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+/* Kotak Setiap Komentar */
+.review .box-container .box {
+  flex: 1 1 30rem; /* Mengatur kartu berjajar dan otomatis turun di layar HP */
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+  padding: 2rem;
+  position: relative;
+  border: .1rem solid rgba(0,0,0,.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review .box-container .box .fa-quote-right {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #eee;
+}
+
+.review .box-container .box .Stars i {
+  color: #f1c40f;
+  font-size: 1.5rem;
+}
+
+.review .box-container .box p {
+  color: #666;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding-top: 1rem;
+}
+
+.review .box-container .box .user {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.review .box-container .box .user img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.review .box-container .box .user h3 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.review .box-container .box .user span {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Styling Utama Section Contact */
+.contact {
+    padding: 3rem 9%;
+    background-color:#f7dcbd;
+}
+
+.contact .heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #d1b89a;
+    font-weight: bold;
+}
+
+.contact .heading span {
+    color: #d1b89a;
+}
+
+/* Mengatur Tata Letak Sejajar (Form & Gambar) */
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling Kotak Formulir (Sebelah Kiri) */
+.contact .row form {
+    flex: 1 1 40rem;
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, 0.08);
+    padding: 3rem;
+    border-radius: .8rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.04);
+}
+
+.contact .row form .box,
+.contact .row form textarea {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.5rem;
+    color: #d1b89a;
+    border: .1rem solid #ddd;
+    border-radius: .5rem;
+    margin: 1rem 0;
+    background: #fafafa;
+    outline: none;
+    text-transform: none;
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row form .box:focus,
+.contact .row form textarea:focus {
+    border-color:#d1b89a;
+    background: #fff;
+}
+
+/* Styling Tombol Kirim */
+.contact .row form .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #333;
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 3rem; /* Membuat tombol lonjong melengkung */
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.contact .row form .btn:hover {
+    background: #d1b89a;
+}
+
+/* Styling Gambar Ilustrasi (Sebelah Kanan) */
+.contact .row .image {
+    flex: 1 1 40rem;
+    text-align: center;
+}
+
+.contact .row .image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+/*media queries*/
+@media (max-width: 991px) {
+  
+  html{
+  font-size: 55%;
+}
+
+header{
+  padding:2rem;
+}
+section{
+  padding:2rem;
+}
+
+.home {background-position: left;
+}
+
+}
+
+@media (max-width: 768px){
+
+  header .fa-bars{
+    display:none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:#785e4a;
+  }
+
+
+
+  header .navbar{
+    position:absolute;
+    top:100%; left:0%; right:0%; 
+    background:#faf7f0;
+    border-top: .1rem solid #3b2a20;
+    clip-path:polygon(0  0, 100% 0, 100% 0, 0 0);
+    transition: .3s;
+  }
+
+  header #toggler:checked ~ .navbar{
+    clip-path:polygon(0  0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a{
+    margin:1.5rem;
+    padding:.1rem;
+    background:#faf7f0;
+    border: .1rem solid #3b2a20;
+    display: block;
+    font-size: 2rem;
+  }
+
+.home .content h3{
+  font-size: 5rem;
+}
+
+.home .content span{
+  font-size: 2.5rem;
+}
+.icons-container .icons h3{
+  font-size:2rem;
+}
+
+.icons-container .icons span{
+  font-size: 1.7rem;
+}
+
+}
+
+@media (max-width: 450px) {
+  
+  html{
+  font-size: 50%;
+}
+
+.heading{
+  font-size: 3rem;
+}
+
+}

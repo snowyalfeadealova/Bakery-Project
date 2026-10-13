@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SweeTooth</title>
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .form-section {
+            background-color: #fdfbf7;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #785e4a;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d4c3b3;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section (Sesuai kerangka asli Anda) -->
+    <header>
+       <input type="checkbox" id="toggler">
+       <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="index.html" class="logo">SweeTooth<span>.</span></a>
+      
+        <nav class="navbar">
+            <a href="index.html#home">home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="review.html">review</a>
+            <a href="contact.html" class="active">contact</a>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
+    </header>
+
+    <!-- Contact Section dengan Form Lengkap & Validasi -->
+    <section class="contact" id="contact" style="padding: 30px 20px;">
+        <div class="form-section">
+            <h1 class="heading" style="text-align: center; color: #785e4a; margin-bottom: 20px;"><span>Contact</span> Us</h1>
+
+            <form action="#" method="POST">
+                
+                <!-- 1. Text Input -->
+                <div class="form-group">
+                    <label for="fullname">Your Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your name" class="box" required minlength="3">
+                </div>
+
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" class="box" required>
+                </div>
+
+                <!-- 2. Password Input (Syarat Tugas) -->
+                <div class="form-group">
+                    <label for="password">Account Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Min. 6 characters" class="box" required minlength="6">
+                </div>
+
+                <!-- Number Input -->
+                <div class="form-group">
+                    <label for="number">Your Phone Number:</label>
+                    <input type="number" id="number" name="number" placeholder="Enter your number" class="box" required>
+                </div>
+
+                <!-- 3. Selection / Dropdown (Syarat Tugas) -->
+                <div class="form-group">
+                    <label for="order-type">Subject / Query Type:</label>
+                    <select id="order-type" name="order_type" class="box" required>
+                        <option value="">-- Please Select --</option>
+                        <option value="custom-cake">Custom Cake Order</option>
+                        <option value="catering">Event Catering</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+                </div>
+
+                <!-- 4. Radio Input (Syarat Tugas) -->
+                <div class="form-group">
+                    <label>Preferred Contact Time:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="time" value="morning" required> Morning</label>
+                        <label><input type="radio" name="time" value="evening"> Evening</label>
+                    </div>
+                </div>
+
+                <!-- 5. Checkbox Input (Syarat Tugas) -->
+                <div class="form-group">
+                    <label>Newsletter & Updates:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="subscribe" value="yes"> Subscribe to weekly promo</label>
+                    </div>
+                </div>
+
+                <!-- 6. Text Area (Syarat Tugas) -->
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea name="message" id="message" placeholder="Write your message here..." cols="30" rows="6" class="box" required></textarea>
+                </div>
+
+                <!-- 7. Submit Button (Syarat Tugas) -->
+                <div class="form-group" style="text-align: center; margin-top: 20px;">
+                    <input type="submit" value="Send Message" class="btn" style="background-color: #785e4a; color: #fff; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
